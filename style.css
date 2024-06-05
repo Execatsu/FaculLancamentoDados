@@ -1,0 +1,194 @@
+html {
+    --rgb-gradient: linear-gradient(45deg, rgba(255,0,0) 0%, rgba(255,255,0)20%, rgba(0,255,0) 40%, rgba(0,255,225) 60%, rgba(0,0,255) 80%, rgba(255,0,255) 100%);
+}
+
+html.dark {
+    --primary-bg: #111;
+    --primary-cl: #ddd;
+
+    --secundary-bg: #333;
+
+    --dice-bg: #555;
+}
+
+html.ligth {
+    --primary-bg: #999;
+    --primary-cl: #222;
+
+    --secundary-bg: #ccc;
+    
+    --dice-bg: 
+}
+
+/* GENERAL */
+
+*, h1 {
+    font-family: sans-serif;
+}
+
+select, input, textarea, button {
+    background: var(--secundary-bg);
+    color: var(--primary-cl);
+    border: .1px solid #888;
+    border-radius: 2px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* DEFAULT */
+
+.body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background: var(--primary-bg);
+
+    color: var(--primary-cl);
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    background: var(--rgb-gradient);
+    width: 100%;
+    bottom: -1px;
+    height: 2px;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background: var(--secundary-bg);
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: .7em;
+    text-shadow: 0 0 3px black;
+    color: var(--primary-cl);
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#btn-mode {
+    height: 35px;
+    width: 35px;
+}
+
+/* FORM */
+.form, .dice-form {
+    background: var(--primary-bg);
+    color: var(--primary-cl);
+
+    padding: 10px;
+    min-height: 200px;
+    min-width: 200px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, rgba(255,0,0) 0%, rgba(255,255,0)20%, rgba(0,255,0) 40%, rgba(0,255,225) 60%, rgba(0,0,255) 80%, rgba(255,0,255) 100%) 1;
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+/* DICE */
+.dice-form {
+    padding: 20px;
+    position: relative;
+}
+
+.dice {
+    width: 20vw;
+    height: 20vw;
+    background: var(--dice-bg);
+    border-radius: 2vw;
+    box-shadow: 0 0 2vw .2vw var(--primary-bg) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+@media screen and (max-width: 768px) {
+    .dice {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .dice {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+
+.form > button, .form > select {
+    font-size: .75em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn-dice-div {
+    width: 100%;
+}
+
+.btn-dice-div > span {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+.easteregg {
+    position: absolute;
+    right: 0;
+    height: 300px;
+    top: calc(100vh - 300px);
+}
+
+.easteregg2 {
+    position: absolute;
+    max-width: 100vw;
+}
+
+.disabled {
+    display: none;
+}

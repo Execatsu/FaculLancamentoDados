@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Encripter</title>
+</head>
+<body class="body">
+    
+    <header class="header">
+        <button mode="d" id="btn-mode" title="EASTEREGG">🌙</button>
+    </header>
+    <main class="main">
+        <div class="screen">
+            <section class="form">
+                <label for="dice-faces">Qual dado você deseja girar?</label>
+                <select name="dice-faces" id="dice-faces">
+                    <option value="">Selecione</option>
+                    <option title="2" value="2">D2</option>
+                    <option title="3" value="3">D3</option>
+                    <option title="4" value="4">D4</option>
+                    <option title="6" value="6">D6</option>
+                    <option title="8" value="8">D8</option>
+                    <option title="10" value="10">D10</option>
+                    <option title="20" value="20">D20</option>
+                    <option title="30" value="30">D30</option>
+                    <option title="50" value="50">D50</option>
+                    <option title="100" value="100">D100</option>
+                </select>
+                <button>Girar</button>
+            </section>
+            <section class="dice-form disabled">
+                <span></span>
+                <div class="btn-dice-div">
+                    <span>X</span>
+                </div>
+                <div class="dice"></div>
+                <button id="rerun">Girar Novamente</button>
+            </section>
+        </div>
+        <footer class="footer">
+            <span>Cássius Fernando</span>
+            <span>Gustavo Ribeiro</span>
+            <span>Heitor Kozlowski</span>
+            <span>Nikerson Vilela</span>
+        </footer>
+    </main>
+    <img src="./gatito.gif" id="gatito" alt="Spoiler" class="easteregg disabled">
+    <img src="./gatito2.gif" id="gatito2" alt="Spoiler2" class="easteregg2 disabled">
+    <script src="./script.js"></script>
+</body>
+</html>
