@@ -53,6 +53,11 @@ function teste() {
 function girar(e) {
     let sucesso = false;
 
+    let audio = new Audio($btnGirar.getAttribute('data-audiourl'))
+    audio.preload
+    audio.currentTime = 0;
+    audio.volume = 1;
+
     let n = sortear($slctDice.value);
 
     let dice = $diceForm.querySelector(".dice");
@@ -61,6 +66,7 @@ function girar(e) {
 
     if(!(n < 0 || n > $slctDice.value)) {
         $diceForm.querySelector("span").innerHTML = "Você girou um D" + $slctDice.value;
+        audio.play();
         sucesso = true;
     }
 
